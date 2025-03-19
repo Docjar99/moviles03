@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/navigation_bar_item_small_label_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Conversor de monedas!"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:background="@color/design_default_color_primary"
+        android:textColor="@color/white"
+    />
+    <TextView
+        android:id="@+id/ingreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese la cantidad"
+        android:layout_below="@id/navigation_bar_item_small_label_view"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+    />
+    <EditText
+        android:id="@+id/cantidad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Moneda"
+        android:layout_below="@id/ingreso"
+        android:layout_centerHorizontal="true"
+        android:ems="12"
+        android:textAlignment="center"
+        android:inputType="numberSigned|numberDecimal"
+
+    />
+    <RadioGroup
+        android:id="@+id/btns"
+        android:layout_height="100dp"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/cantidad">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cantidad"
+            android:id="@+id/radio0"
+            android:text="Dólares"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio0"
+            android:text="Soles"
+            android:checked="false"
+            />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnConvert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir"
+        android:layout_below="@id/btns"
+        android:onClick="manager"
+
+    />
+
+</RelativeLayout>
