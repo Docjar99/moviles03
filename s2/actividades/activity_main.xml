@@ -18,7 +18,7 @@
         android:padding="20dp"
         android:background="@color/design_default_color_primary"
         android:textColor="@color/white"
-    />
+        />
     <TextView
         android:id="@+id/ingreso"
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_below="@id/navigation_bar_item_small_label_view"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
-    />
+        />
     <EditText
         android:id="@+id/cantidad"
         android:layout_width="fill_parent"
@@ -38,28 +38,33 @@
         android:ems="12"
         android:textAlignment="center"
         android:inputType="numberSigned|numberDecimal"
+        android:background="@color/material_dynamic_secondary50"
 
-    />
+        />
     <RadioGroup
         android:id="@+id/btns"
         android:layout_height="100dp"
         android:layout_width="fill_parent"
         android:layout_below="@id/cantidad">
         <RadioButton
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cantidad"
             android:id="@+id/radio0"
             android:text="Dólares"
             android:checked="true"
+            android:background="@color/material_dynamic_tertiary95"
+
             />
         <RadioButton
             android:id="@+id/radio1"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/radio0"
             android:text="Soles"
             android:checked="false"
+
+            android:background="@color/material_dynamic_tertiary60"
             />
     </RadioGroup>
 
@@ -72,5 +77,11 @@
         android:onClick="manager"
 
     />
-
+    <GridView
+        android:layout_below="@id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/gridView"
+        android:numColumns="3"
+    />
 </RelativeLayout>
