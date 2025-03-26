@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/navigation_bar_item_small_label_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Conversor de monedas!"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:padding="20dp"
+        android:background="@color/design_default_color_primary"
+        android:textColor="@color/white"
+        />
+    <TextView
+        android:id="@+id/ingreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese la cantidad a convertir"
+        android:layout_below="@id/navigation_bar_item_small_label_view"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        />
+    <EditText
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Moneda"
+        android:layout_below="@id/ingreso"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:inputType="numberSigned|numberDecimal"
+
+        />
+    <Button
+        android:id="@+id/btnElegir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elegir Moneda"
+        android:layout_below="@id/cantidad"
+        android:layout_centerHorizontal="true"
+        android:onClick="mostrarOpciones" />
+
+    <Spinner
+        android:id="@+id/spinnerMonedas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnElegir"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/resultadoConversion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resultados de conversiones:"
+        android:layout_below="@id/spinnerMonedas"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+
+</RelativeLayout>
